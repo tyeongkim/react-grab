@@ -23,10 +23,7 @@ let hoveredIframe: IFrameHoverCache | null = null;
 let resumeTimerId: ReturnType<typeof setTimeout> | null = null;
 
 const isPointInsideRect = (clientX: number, clientY: number, rect: DOMRect): boolean =>
-  clientX >= rect.left &&
-  clientX <= rect.right &&
-  clientY >= rect.top &&
-  clientY <= rect.bottom;
+  clientX >= rect.left && clientX <= rect.right && clientY >= rect.top && clientY <= rect.bottom;
 
 const scheduleResume = (): void => {
   if (resumeTimerId !== null) {
